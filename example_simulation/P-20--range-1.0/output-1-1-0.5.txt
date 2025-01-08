@@ -1,0 +1,81 @@
+seed=33333333333332  # generazione dei pattern, seed2 è per generare il noise
+seed2=0
+name=1-1-0.5
+tmpdir=/home/apicella/Output_Files/example_simulation1/P-20--range-1.0/
+outdir=/home/apicella/Output_Files/example_simulation1/P-20--range-1.0/
+topo=random                    topologia connessioni
+S=10                           numero siti
+G=5                            siti del pattern
+Z=50                           neuroni per sito
+K=25                           neuroni per sito del pattern
+sort=2                         tipo di sorting dei neuroni
+range=1.0                      range di spread delle fasi
+P=20                           numero pattern
+f=8                            frequenza di learning (Hz)
+file=3                         salvare/leggere file delle connessioni
+pmax=3                         numero massimo di pattern osservati
+leggo connessioni dal file /home/apicella/Output_Files/example_simulation1/P-20--range-1.0//CONNESSIONI6-10-50-5-25-20-2-0-1-random
+leggo pattern dal file /home/apicella/Output_Files/example_simulation1/P-20--range-1.0//PATTERN6-10-50-5-25-20-2-0-1-random
+numero cue: 0
+noise=0                        0: rumore gaussiano, 1: rumore costante
+alpha=0.5                      ampiezza rumore
+rho=1                          rate rumore (ms^-1)
+sigma=1                        forza connessioni eccitatorie (E0)
+delta=1                        forza connessioni inibitorie (I0)
+seed4=0
+smin=1                         minimo E0
+smax=1                         massimo E0
+bin=1                          bin temporale (ms)
+flush=10                       ogni quanti bin scrive medie e overlap
+flush2=20                      su quanti flush calcola fluttuazioni overlap
+rstop=0                        rate di stop (Hz per neurone)
+nstop=0                        numero flush di stop
+tmax=300                       tempo massimo simulazione
+pout=20                        numero massimo di pattern osservati
+tmin=100                       start calcolo overlap
+twin=200                       finestra massima overlap
+fmin=0.5                       finestra minima = fmin*twin
+maxsp=1048576                  numero massimo di spike scritte su file
+maxsp2=1000000                 numero massimo di spike
+tplay=0
+FILE: spikes3-1-1-0.5.txt	colonne:
+	1) tempo in ms
+	2) flag=0 se la spike è dovuta a input interno alla rete
+	   flag=1 se la spike è indotta dalla cue
+	3) quale neurone ha sparato
+	4,5,6...) per i primi pout=20 pattern, posizione del neurone nel pattern
+	la posizione è determinata dal sito (primo sito in basso, secondo subito sopra, etc...)
+	all'interno del sito i neuroni appartententi al pattern sono i primi nell'ordine che hanno nel pattern
+FILE: rate3-1-1-0.5.txt	file scritto ogni bin (1 bin = 1 ms)
+	colonne:
+	1) tempo in ms
+	2...11) per ognuno dei 10 siti, il rate medio nell'ultimo bin
+FILE: medie3-1-1-0.5.txt	file scritto ogni flush=10 bin (1 bin = 1 ms)
+	differisce da temp3-1-1-0.5.dat nel senso che le medie e le varianze sono calcolate su tutto il run,
+	non solo sugli ultimi 10 bin
+	per una descrizione delle quantità in colonna vedi temp3-1-1-0.5.txt
+FILE: temp3-1-1-0.5.txt	file scritto ogni flush=10 bin (1 bin = 1 ms)
+	dati nelle colonne:
+	1) sigma
+	2) delta
+	3) alpha
+	4) tempo in ms
+	5) rate medio per neurone in Hz (calcolato sugli ultimi 10 bin)
+	   N.B: il rate è il numero di spike in un bin, diviso per N=500 neuroni e per il bin in secondi
+	6) varianza del numero di spike in un bin (calcolata sugli ultimi 10 bin)
+	7) coefficiente di variazione (radice della varianza del numero di spike diviso la media del numero di spike)
+	8) fattore di Fano (varianza del numero diviso la media... è uguale a 1 per spike poissoniane)
+FILE: q3-1-1-0.5.txt	file scritto ogni flush=10 bin (1 bin = 1 ms)
+	dati nelle colonne:
+	1) sigma
+	2) delta
+	3) alpha
+	4) tmin: tempo iniziale calcolo overlap
+	5) tmax: tempo finale calcolo overlap
+	6) numero di spike tra tmin e tmax
+	7) quale pattern ha dato overlap massimo
+	8) valore dell'overlap massimo
+	9) fluttuazioni dell'overlap massimo calcolate sugli ultimi flush2=20 punti
+	10, 12, ...) finestra utilizzata per calcolo overlap (per i primi pout=20 pattern)
+	11, 13, ...) valore dell'overlap (per i primi pout=20 pattern)
+t=300 ms (0.186667 Hz/neurone) spike totali: 28 (numero di spike scritte 28)

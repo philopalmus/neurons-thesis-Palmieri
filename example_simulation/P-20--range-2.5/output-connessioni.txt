@@ -1,0 +1,26 @@
+seed=33333333333332  # generazione dei pattern, seed2 è per generare il noise
+seed2=0
+name=new
+tmpdir=/home/apicella/Output_Files/example_simulation1/P-20--range-2.5/
+outdir=/home/apicella/Output_Files/example_simulation1/P-20--range-2.5/
+topo=random                    topologia connessioni
+S=10                           numero siti
+G=5                            siti del pattern
+Z=50                           neuroni per sito
+K=25                           neuroni per sito del pattern
+sort=2                         tipo di sorting dei neuroni
+range=2.5                      range di spread delle fasi
+P=20                           numero pattern
+f=8                            frequenza di learning (Hz)
+file=6                         salvare/leggere file delle connessioni
+pmax=3                         numero massimo di pattern osservati
+seed3=0
+FILE: matrice3-10-50-5-25-20-2-0-2.5-random.txt	dati nelle colonne:
+	1) sito di partenza
+	2) sito di arrivo
+	3) somma di tutte le connessioni positive dal sito di partenza a quello di arrivo
+	4)   "       "         "      negative      "        "                 "
+scrivo connessioni nel file /home/apicella/Output_Files/example_simulation1/P-20--range-2.5//CONNESSIONI6-10-50-5-25-20-2-0-2.5-random
+rileggo connessioni appena scritte...
+scrivo pattern nel file /home/apicella/Output_Files/example_simulation1/P-20--range-2.5//PATTERN6-10-50-5-25-20-2-0-2.5-random
+esco senza fare dinamica...
