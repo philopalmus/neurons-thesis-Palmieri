@@ -1,7 +1,7 @@
 # What is this? <!-- omit from toc -->
 This is some of the code I used to explore the data and make the plots for my master thesis.
 I share it here for my colleagues that use the same or a future evolution of the model in the thesis hoping it could be useful.
-I also think this code could be sued as a basis to which other functions and expansions could be added, I try to make the code easy to read and understand.
+I also think this code could be used as a basis to which other functions and expansions could be added, I try to make the code easy to read and understand.
 
 # DISCLAIMER: <!-- omit from toc -->
 *I am not a programmer and this code may be full of very wrong things, or things that are not best practice. Before changing anything in `q3merge.py` or `simulation_class.py` I would check where that thing is used in the rest of the code because it could be easy to break something. I'm always available if help is needed and I was not lear enough in this explanation.*
