@@ -4,7 +4,7 @@ I share it here for my colleagues that use the same or a future evolution of the
 I also think this code could be used as a basis to which other functions and expansions could be added, I try to make the code easy to read and understand.
 
 # DISCLAIMER: <!-- omit from toc -->
-*I am not a programmer and this code may be full of very wrong things, or things that are not best practice. Before changing anything in `q3merge.py` or `simulation_class.py` I would check where that thing is used in the rest of the code because it could be easy to break something. I'm always available if help is needed and I was not lear enough in this explanation.*
+*I am not a programmer and this code may be full of very wrong things, or things that are not best practice. Before changing anything in `q3merge.py` or `simulation_class.py` I would check where that thing is used in the rest of the code because it could be easy to break something. I'm always available if help is needed and I was not clear enough in this explanation.*
 
 - [1. Content, utility and logic of the code](#1-content-utility-and-logic-of-the-code)
     - [1.1. `simulation_class.py`](#11-simulation_classpy)
