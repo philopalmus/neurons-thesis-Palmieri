@@ -40,7 +40,7 @@ To have a more easily readable dataframe you can also save the data to `csv` (or
 
 It does not matter where the `q3` files are in the directory searched by `q3merge.py`, it looks for all the files that start with "q3" and end with ".dat".
 🔴 Important: you need to format the folder names of the simulations with different parameters in a way that contains the info of the **number of patterns** and the **range**.
-The default that I used is `P-{number of patterns}--range-{range}` but you can personalize the code in whatever way you named the folders you already have by changing the "regular expression" the code changes.
+The default that I used is `P-{number of patterns}--range-{range}` but you can personalize the code in whatever way you named the folders you already have by changing the "regular expression" the code uses.
 All the important things to change before launching `q3merge.py` are at the beginning of the script, then you just launch it with no parameters.
 
 ### 1.3. `make_fig_spikes.py`
